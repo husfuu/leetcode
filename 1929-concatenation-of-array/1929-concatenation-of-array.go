@@ -1,3 +1,7 @@
 func getConcatenation(nums []int) []int {
- 	return append(nums, nums...)   
+    res := nums
+	for i := 0; i < len(nums); i++ {
+		res = append(res, nums[i])
+	}
+    return res
 }
