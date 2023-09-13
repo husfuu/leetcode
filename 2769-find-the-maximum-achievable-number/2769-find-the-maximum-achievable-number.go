@@ -5,5 +5,5 @@ func theMaximumAchievableX(num int, t int) int {
 	// x = num + t + t
 	// x = num + 2*t
 
-	return num + 2*t
+	return num + t + t
 }
