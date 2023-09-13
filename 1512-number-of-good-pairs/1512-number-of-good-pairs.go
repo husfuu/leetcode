@@ -1,11 +1,11 @@
 func numIdenticalPairs(nums []int) int {
-	var pair int
-	for i := 0; i < len(nums); i++ {
-		for j := i + 1; j < len(nums); j++ {
-			if i < j && nums[i] == nums[j] {
-				pair += 1
-			}
-		}
-	}
-	return pair
+    numCounts := make(map[int]int)
+    var pair int
+    for _, num := range nums {
+        numCounts[num]++
+    }
+    for _, count := range numCounts {
+        pair += (count * (count - 1)) / 2
+    }
+    return pair
 }
